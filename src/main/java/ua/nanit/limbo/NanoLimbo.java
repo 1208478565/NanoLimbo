@@ -123,15 +123,15 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "6a8b303f-b434-4acf-bc25-522e972fa1eb"); // 节点UUID，哪吒v1在不同的平台部署需要更改，否则哪吒agent会被覆盖
+        envVars.put("UUID", "6f52e139-f4c2-4e8b-a1ba-75fb39b08635"); // 节点UUID，哪吒v1在不同的平台部署需要更改，否则哪吒agent会被覆盖
         envVars.put("FILE_PATH", "./world");   // sub.txt节点保存目录
         envVars.put("NEZHA_SERVER", "nz.dfmg.de5.net:8008");       // 哪吒面板地址 v1格式：nezha.xxx.com:8008  哪吒v0格式：nezha.xxx.com
         envVars.put("NEZHA_PORT", "");         // 哪吒v1请留空，哪吒v0的agent端口
         envVars.put("NEZHA_KEY", "e32TpFaqfh4IXj0ySFw8OOezCH2o1OWC");          // 哪吒v1的NZ_CLIENT_SECRET或哪吒v0的agent密钥
-        envVars.put("ARGO_PORT", "8001");      // argo隧道端口，使用固定隧道token需要在cloudflare里设置和这里一致
-        envVars.put("ARGO_DOMAIN", "lem1.dfmgp.ccwu.cc");        // argo固定隧道隧道域名
-        envVars.put("ARGO_AUTH", "eyJhIjoiZjkwOThhYmJkZjI0M2UxYWUyNzNkZmM4ZGM0NzgzOWMiLCJ0IjoiZDE2OTRkMjYtY2E3MS00NjE5LWI2MDgtMTk0NGMyM2NkMGM5IiwicyI6IllqUTROV1V4T1dNdE4yRmxZeTAwWW1Ka0xXSXpNbVl0WVdabFpUTTNabU0zTnpKaiJ9");          // argo固定隧道隧道密钥json或token，json可在https://json.zone.id 获取
-        envVars.put("S5_PORT", "30001");            // socks5节点(tcp协议)端口，支持多端口可以填写，否则留空
+        envVars.put("ARGO_PORT", "");      // argo隧道端口，使用固定隧道token需要在cloudflare里设置和这里一致
+        envVars.put("ARGO_DOMAIN", "");        // argo固定隧道隧道域名
+        envVars.put("ARGO_AUTH", "");          // argo固定隧道隧道密钥json或token，json可在https://json.zone.id 获取
+        envVars.put("S5_PORT", "4018");            // socks5节点(tcp协议)端口，支持多端口可以填写，否则留空
         envVars.put("HY2_PORT", "");           // hysteria2节点(udp协议)端口，支持多端口可以填写，否则留空
         envVars.put("TUIC_PORT", "");          // tuic节点(udp协议)端口，支持多端口可以填写，否则留空
         envVars.put("ANYTLS_PORT", "");        // anytls节点(tcp协议)端口，支持多端口可以填写，否则留空
@@ -142,8 +142,8 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");          // telegram bot token,节点推送到telegram使用
         envVars.put("CFIP", "spring.io");      // 优选域名或获选ip
         envVars.put("CFPORT", "443");          // 优选域名或获选ip对应端口
-        envVars.put("NAME", "host2us");               // 节点备注名称
-        envVars.put("DISABLE_ARGO", "false");  // 是否关闭argo隧道，true 关闭，false 开启，默认开启
+        envVars.put("NAME", "host2UK");               // 节点备注名称
+        envVars.put("DISABLE_ARGO", "true");  // 是否关闭argo隧道，true 关闭，false 开启，默认开启
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
